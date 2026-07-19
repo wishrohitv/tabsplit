@@ -1,19 +1,13 @@
-import { getDefaultWallets } from '@rainbow-me/rainbowkit'
-import { configureChains, createConfig } from 'wagmi'
-import { publicProvider } from 'wagmi/providers/public'
+import { getDefaultConfig } from '@rainbow-me/rainbowkit'
+import { http } from 'viem'
 import { monadTestnet } from './constants'
 
-const { chains, publicClient } = configureChains([monadTestnet], [publicProvider()])
-
-const { connectors } = getDefaultWallets({
+export const wagmiConfig = getDefaultConfig({
   appName: 'TabSplit',
-  chains,
+  projectId: '3fbb6bba6f1de962d911bb5b5c3dba68',
+  chains: [monadTestnet],
+  transports: {
+    [monadTestnet.id]: http(),
+  },
+  ssr: false,
 })
-
-export const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient,
-})
-
-export { chains }
