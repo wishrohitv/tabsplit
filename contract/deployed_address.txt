@@ -1,0 +1,7 @@
+DEPLOYED ✅
+
+Contract Address: 0x5ce44D94f38F5C08D46eb69f6edd9bb5D7EBdbEb
+Network: Monad Testnet (Chain ID: 10143)
+Tx Hash: 0x384e2a655ee49a88a2dd588ef53f6fa48dfdb3f99d4fb0536a29cab72e155f31
+Block: 46217837
+Explorer: https://testnet.monadexplorer.com/address/0x5ce44D94f38F5C08D46eb69f6edd9bb5D7EBdbEb
