@@ -15,7 +15,12 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <WagmiConfig config={wagmiConfig}>
       <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>
+        <RainbowKitProvider
+          appInfo={{
+            appName: 'TabSplit',
+            learnMoreUrl: 'https://wishrohitv.github.io/tabsplit/',
+          }}
+        >
           <App />
           <Toaster position="bottom-right" />
         </RainbowKitProvider>
